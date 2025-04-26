@@ -1,5 +1,5 @@
 ### Trello
-[![Build status](https://ci.appveyor.com/api/projects/status/hwsd8sjt7lwvtgej?svg=true)](https://ci.appveyor.com/project/EvgeniyPryanichnikov/ahj-trello)
+[![Build status](https://ci.appveyor.com/api/projects/status/4r8sb4yoggetw5x9?svg=true)](https://ci.appveyor.com/project/OlikPr/ahj-trello)
 
 deployment: https://olikpr.github.io/ahj-trello/
 #### Легенда
