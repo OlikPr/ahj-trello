@@ -2,26 +2,20 @@ image: Ubuntu2004
 stack: node 19  
 branches:
   only:
-    - main  
-
-cache: node_modules  
-
+    - main  # ветка git
+cache: node_modules  # кешировани
 install:
-  - yarn install
-
-build: off  
-
+  - npm install  # команда установки зависимостей
+build: off  # отключаем встроенную в appveyor систему сборки
 build_script:
-  - yarn run build   
-
+  - npm run build   # команда сборки
 test_script:
-  - yarn run lint && yarn run test  
+  - npm run lint && npm run test  # скрипт тестирования
   
-deploy_script:  
+deploy_script:  # скрипт развёртывания
   - git config --global credential.helper store
-  - git config --global user.name EvgeniyPryanichnikov
-  - git config --global user.email luriro07@icloud.com
-  - echo "https://$GITHUB_TOKEN:x-oauth-basic@github.com">"$HOME/.git-credentials"
+  - git config --global user.name OlikPr
+  - git config --global user.email prikhodkolik15@gmail.com
+  - git remote set-url origin https://x-access-token:$GITHUB_TOKEN@github.com/OlikPr/ahj-trello.git
   - npx push-dir --dir=dist --branch=gh-pages --force --verbose
-
 
